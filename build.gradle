@@ -1,5 +1,4 @@
 plugins {
-	id 'net.linguica.maven-settings' version '0.5'
 	id "com.google.cloud.artifactregistry.gradle-plugin" version "2.2.2"
 	id 'java'
 	id 'org.springframework.boot' version '3.3.3'
@@ -16,10 +15,6 @@ java {
 }
 
 repositories {
- 	maven {
-		// This is needed for downloading the plugin for google artifactregistry
-		url = project.pluginurl
-	}
 	maven {
 		url = project.remoteurl
 	}
@@ -35,7 +30,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-web-services'
-	implementation 'com.alacritysys.developer:plugins:3.3.3-RELEASE' 
+	implementation 'com.alacritysys.developer:plugins:3.3.3-RELEASE' // Replace this with some internal artefact
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
@@ -43,3 +38,4 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
