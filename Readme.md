@@ -1,6 +1,6 @@
 # Example Repo For Gradle custom properties for Google Artifact Registry
 
-This is a sample repository to integrate Google Artifact Registry and Gradle for developer and CI system to avoid slow buils and cost optomization by reducing egress and ingress costs from Google Artifact Registry
+This is a sample repository to integrate Google Artifact Registry and Gradle for developer and CI system to avoid slow buils and cost optomization by reducing egress and ingress costs from Google Artifact Registry. The Idea is to use direct connection to public maven repo for developers as much as possible and use internal URL for CI systems. 
 
 ## Use Case 
 
@@ -29,6 +29,7 @@ Make sure that both the files have same properties (key) but different values as
 
 1. Copy / Mount the apporopriate properties file as gradle.properties in GRADLE_USER_HOME
 1. Build the application using ./gradlew  build as normal or ./gradlew  build --i for showing the download URL
+
 
 
 ## The settings.gradle 
